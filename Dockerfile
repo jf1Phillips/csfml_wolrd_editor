@@ -10,14 +10,10 @@ RUN apt-get update && apt-get install -y \
     x11-apps \
     && rm -rf /var/lib/apt/lists/*
 
-# Définition du dossier de travail
 WORKDIR /app
 
-# Clonage du projet (ou copie si le code est en local)
-RUN git clone https://github.com/jf1Phillips/csfml_wolrd_editor.git /app
+COPY . .
 
-# Compilation du projet
 RUN make
 
-# Commande pour exécuter le programme avec affichage X11
 CMD ["./my_world"]
