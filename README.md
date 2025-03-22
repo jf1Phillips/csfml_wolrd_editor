@@ -1,20 +1,20 @@
-This is an Epitech project called My_World.
+This is an Epitech project called My_World. (Work with docker or csfml librairie)
 
 The goal of this project is to display a map and edit it at runtime.
 ____________________________________________________________________
 You can compile this binary using:
 
-./my_world
+sudo ./run.sh
 --> to open an empty map that you can customize.
 
-./my_world map.legend
+sudo ./run.sh map.legend
 --> to open a saved map that you can customize.
 
-./my_world x y
+sudo ./run.sh x y
 --> to open a map with the given size.
 --> WARNING: x and y have to be between 1 and 150, or else it won't work.
 
-./my_world -h
+sudo ./run.sh -h
 --> to display this README as a -h.
 ____________________________________________________________________
 KEYBOARD CONTROLS:
