@@ -1,5 +1,4 @@
 #!/bin/bash
-sudo usermod -a -G docker $USER
 xhost +local:docker
 docker build -t myworld .
 docker run --rm -it \
