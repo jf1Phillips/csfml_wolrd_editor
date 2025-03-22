@@ -16,4 +16,4 @@ COPY . .
 
 RUN make
 
-CMD ["./my_world"]
+ENTRYPOINT ["./my_world"]

@@ -6,4 +6,5 @@ docker run --rm -it \
     --device /dev/snd \
     -e DISPLAY=$DISPLAY \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
-    myworld
+    -v "$(pwd)/saved_maps:/app/saved_maps" \
+    myworld "$@"
