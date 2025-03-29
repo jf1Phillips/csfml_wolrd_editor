@@ -19,7 +19,7 @@ all: $(OBJ)
 	ar rc $(LIBNAME) $(OBJ)
 
 clean:
-	rm -f $(OBJ)
+	@rm -f $(OBJ)
 
 fclean:
-	rm -f $(LIBNAME)
+	@rm -f $(LIBNAME)

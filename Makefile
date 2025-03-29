@@ -50,18 +50,20 @@ CPPFLAGS = -W -Wall -iquote./include/
 
 OBJ = $(SRC:.c=.o)
 
+CC ?= gcc
+
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	make -C ./lib/my
-	gcc -o $(NAME) $(OBJ) -L./lib/my -lmy -lm $(CSFML)
+	$(CC) -o $(NAME) $(OBJ) -L./lib/my -lmy -lm $(CSFML)
 
 clean:
 	make clean -C ./lib/my
-	rm -rf $(OBJ)
+	@rm -rf $(OBJ)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 	make fclean -C ./lib/my
 
 re: fclean all
