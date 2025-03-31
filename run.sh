@@ -1,6 +1,6 @@
 #!/bin/bash
 xhost +local:docker
-docker build -t myworld .
+docker build -t myworld . && \
 docker run --rm -it \
     --device /dev/dri \
     --device /dev/snd \
